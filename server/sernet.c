@@ -1057,7 +1057,7 @@ int server_make_connection(int new_sock, const char *client_addr, const char *cl
       pconn->outgoing_packet_notify = NULL;
 
       sz_strlcpy(pconn->username, makeup_connection_name(&pconn->id));
-      sz_strlcpy(pconn->addr, client_addr);
+      sz_strlcpy(pconn->addr, "(hidden)");
       sz_strlcpy(pconn->server.ipaddr, client_ip);
 
       conn_list_append(game.all_connections, pconn);
